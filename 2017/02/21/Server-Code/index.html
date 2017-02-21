@@ -7,54 +7,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo 常用命令 | Black&#39;s Blog</title>
+  <title>服务器编程框架 | Black&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="Hexo," />
+    <meta name="keywords" content="服务器,高并发," />
   
 
-  <meta name="description" content="总有一片风景属于你
-
-
-Hexo  配置与常用命令hexo常用命令
-初始化  hexo init dirname
-新建文章  hexo n &amp;quot;myblog&amp;quot;  == hexo new &amp;quot;myblog&amp;quot;
-
-新建草稿  hexo new draft &amp;quot; new_draft&amp;quot;  草稿在使用hexo g的时候并不发布
-
-发布草稿  hexo p">
+  <meta name="description" content="服务器编程框架两种高效的时间处理模式 同步I/O模型通常用于实现Reactor,异步I/O模式则用于实现Proactor模式,不过用同步I/O方式,也可以模拟出Proactor 模式
+ReactorReactor,要求主线程,只负责监听文件描述符上是否有事件发生,有的话就立即将该时间通知工作线程,除此之外,主线程不做任何其他实质性的工作,读写数据,接受新链接,以及处理客户请求均在工作线程中完成.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 常用命令">
-<meta property="og:url" content="https://1314cc.github.io/2017/02/19/Hexo-setting/index.html">
+<meta property="og:title" content="服务器编程框架">
+<meta property="og:url" content="https://1314cc.github.io/2017/02/21/Server-Code/index.html">
 <meta property="og:site_name" content="Black's Blog">
-<meta property="og:description" content="总有一片风景属于你
-
-
-Hexo  配置与常用命令hexo常用命令
-初始化  hexo init dirname
-新建文章  hexo n &amp;quot;myblog&amp;quot;  == hexo new &amp;quot;myblog&amp;quot;
-
-新建草稿  hexo new draft &amp;quot; new_draft&amp;quot;  草稿在使用hexo g的时候并不发布
-
-发布草稿  hexo p">
-<meta property="og:image" content="http://olmfaph6j.bkt.clouddn.com/70219211125.png">
-<meta property="og:image" content="http://olmfaph6j.bkt.clouddn.com/A395.tmp.png">
-<meta property="og:updated_time" content="2017-02-19T13:31:59.231Z">
+<meta property="og:description" content="服务器编程框架两种高效的时间处理模式 同步I/O模型通常用于实现Reactor,异步I/O模式则用于实现Proactor模式,不过用同步I/O方式,也可以模拟出Proactor 模式
+ReactorReactor,要求主线程,只负责监听文件描述符上是否有事件发生,有的话就立即将该时间通知工作线程,除此之外,主线程不做任何其他实质性的工作,读写数据,接受新链接,以及处理客户请求均在工作线程中完成.">
+<meta property="og:updated_time" content="2017-02-21T16:31:49.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 常用命令">
-<meta name="twitter:description" content="总有一片风景属于你
-
-
-Hexo  配置与常用命令hexo常用命令
-初始化  hexo init dirname
-新建文章  hexo n &amp;quot;myblog&amp;quot;  == hexo new &amp;quot;myblog&amp;quot;
-
-新建草稿  hexo new draft &amp;quot; new_draft&amp;quot;  草稿在使用hexo g的时候并不发布
-
-发布草稿  hexo p">
-<meta name="twitter:image" content="http://olmfaph6j.bkt.clouddn.com/70219211125.png">
+<meta name="twitter:title" content="服务器编程框架">
+<meta name="twitter:description" content="服务器编程框架两种高效的时间处理模式 同步I/O模型通常用于实现Reactor,异步I/O模式则用于实现Proactor模式,不过用同步I/O方式,也可以模拟出Proactor 模式
+ReactorReactor,要求主线程,只负责监听文件描述符上是否有事件发生,有的话就立即将该时间通知工作线程,除此之外,主线程不做任何其他实质性的工作,读写数据,接受新链接,以及处理客户请求均在工作线程中完成.">
 
   
 
@@ -189,20 +162,20 @@ Hexo  配置与常用命令hexo常用命令
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-配置与常用命令"><span class="toc-text">Hexo  配置与常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo常用命令"><span class="toc-text">hexo常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-文章属性"><span class="toc-text">hexo 文章属性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#摘要"><span class="toc-text">摘要</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器编程框架"><span class="toc-text">服务器编程框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#两种高效的时间处理模式"><span class="toc-text">两种高效的时间处理模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reactor"><span class="toc-text">Reactor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Proactor"><span class="toc-text">Proactor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reactor与Proactor-总结"><span class="toc-text">Reactor与Proactor 总结:</span></a></li></ol></li></ol></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-Hexo-setting" class="article article-type-post" itemprop="blogPost">
+   <article id="post-Server-Code" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">Hexo 常用命令</h1>
+    <h1 class="post-title">服务器编程框架</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2017.02.19</span>
+        <span>2017.02.21</span>
       </span>
 
       
@@ -215,7 +188,7 @@ Hexo  配置与常用命令hexo常用命令
       
   <span class="article-category">
     <i class="icon-list"></i>
-    <a class="article-category-link" href="/category/Blog/">Blog</a>
+    <a class="article-category-link" href="/category/servercode/">服务器编程</a>
   </span>
 
 
@@ -232,7 +205,7 @@ Hexo  配置与常用命令hexo常用命令
 
       
         <i class="icon-comment"></i> 
-        <span class="ds-thread-count" data-thread-key="post-Hexo-setting"><i class="fa fa-spinner fa-spin"></i></span> 条评论
+        <span class="ds-thread-count" data-thread-key="post-Server-Code"><i class="fa fa-spinner fa-spin"></i></span> 条评论
       
       
     </div>
@@ -240,32 +213,31 @@ Hexo  配置与常用命令hexo常用命令
 
   <div class="article-content">
     
-      <blockquote>
-<p><em>总有一片风景属于你</em></p>
-</blockquote>
-<p><img src="http://olmfaph6j.bkt.clouddn.com/70219211125.png" alt=""></p>
-<h1 id="Hexo-配置与常用命令"><a href="#Hexo-配置与常用命令" class="headerlink" title="Hexo  配置与常用命令"></a>Hexo  配置与常用命令</h1><h1 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h1><ul>
-<li>初始化<br>  <code>hexo init dirname</code></li>
-<li><p>新建文章<br>  <code>hexo n &quot;myblog&quot;  == hexo new &quot;myblog&quot;</code></p>
-</li>
-<li><p>新建草稿<br>  <code>hexo new draft &quot; new_draft&quot;</code><br>  草稿在使用<code>hexo g</code>的时候并不发布</p>
-</li>
-<li>发布草稿<br>  <code>hexo publish &quot;new_draft&quot;</code></li>
-<li>生成网页<br>  <code>hexo g   == hexo generate</code></li>
-<li>启动服务器预览<br>  <code>hexo  s == hexo server</code></li>
-<li>部署到git<br>  <code>hexo d == hexo deploy</code></li>
-<li>清除缓存<br>  <code>hexo clean</code></li>
-</ul>
-<h1 id="hexo-文章属性"><a href="#hexo-文章属性" class="headerlink" title="hexo 文章属性"></a>hexo 文章属性</h1><p>文章生成默认使用blog/scaffolds/post.md 中的配置</p>
+      <h1 id="服务器编程框架"><a href="#服务器编程框架" class="headerlink" title="服务器编程框架"></a>服务器编程框架</h1><h2 id="两种高效的时间处理模式"><a href="#两种高效的时间处理模式" class="headerlink" title="两种高效的时间处理模式"></a>两种高效的时间处理模式</h2><p> 同步I/O模型通常用于实现<code>Reactor</code>,异步I/O模式则用于实现<code>Proactor</code>模式,不过用同步I/O方式,也可以模拟出<code>Proactor</code> 模式</p>
+<h3 id="Reactor"><a href="#Reactor" class="headerlink" title="Reactor"></a>Reactor</h3><p><code>Reactor</code>,要求主线程,只负责监听文件描述符上是否有事件发生,有的话就立即将该时间通知工作线程,除此之外,主线程不做任何其他实质性的工作,读写数据,接受新链接,以及处理客户请求均在工作线程中完成.</p>
+<p><strong>工作流程:</strong></p>
 <ul>
-<li>title :</li>
-<li>date :</li>
-<li>tags : [ C++ , LINUX] ##标签</li>
-<li>category : [ 编程 ] ##分类</li>
-<li>comments :<br>注! <strong>冒号后面有空格</strong> </li>
+<li>主线程往<code>epoll</code>内核事件表中注册socket上的<code>读</code>就绪事件.</li>
+<li>主线程调用<code>epoll_wait</code>等待socket上有数据可读.</li>
+<li>当socket上有数据可读时,<code>epoll_wait</code>通知主线程,主线程则将socket可读事件放入请求队列.</li>
+<li>睡眠在请求队列上的某个工作线程被唤醒,它从socket中读取数据,并处理客户请求,然后往epoll内核事件表中注册该socket上的写就绪事件.</li>
+<li>主线程调用epoll_wait等待socket可写.</li>
+<li>当socket可写时,<code>epoll_wait</code>通知主线程,主线程将socket可写事件放入请求队列.</li>
+<li>睡眠在请求队列上的某个工作线程被唤醒,它往socket上写入服务器处理客户请求的结果.</li>
 </ul>
-<p><img src="http://olmfaph6j.bkt.clouddn.com/A395.tmp.png" alt="文章属性配置"></p>
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>写文章时,<code>&lt;!**more**&gt;</code> 之上为摘要</p>
+<h3 id="Proactor"><a href="#Proactor" class="headerlink" title="Proactor"></a>Proactor</h3><p><strong>与Reactor模式不同,Proactor将所有的I/O操作都交给主线程和内核来处理,工作线程仅仅负责业务逻辑.</strong></p>
+<p>使用异步I/O模型(以<code>aio_read 和 aio_write</code>为例)</p>
+<p><strong>工作流程:</strong></p>
+<ul>
+<li>主线程调用<code>aio_read</code>函数想内核注册socket上的<strong>读完成</strong>事件,并告诉内核用户读缓冲区的位置,以及读操作完成后如何通知应用程序(以信号为例)</li>
+<li>主线程继续处理其他逻辑</li>
+<li>当socket上的数据被读入用户缓冲区后,内核将向应用程序发送一个信号,以通知应用程序数据可用.</li>
+<li>应用程序预先定义好的信号处理函数选择一个工作线程来处理客户请求.工作线程处理完客户请求之后,调用<code>aio_write</code>函数向内核注册socket上的写完成事件,并告诉内核用户写缓冲区的位置,以及写操作完完成时如何通知应用程序.</li>
+<li>主线程继续处理其他逻辑.</li>
+<li>当用户缓冲区的数据被写入socket中后,内核将向应用程序发送一个信号,以通知应用程序数据已经发送完毕.</li>
+<li>应用程序预先定义好的信号处理函数选择一个工作线程来做善后处理,比如决定是否关闭socket.</li>
+</ul>
+<h3 id="Reactor与Proactor-总结"><a href="#Reactor与Proactor-总结" class="headerlink" title="Reactor与Proactor 总结:"></a>Reactor与Proactor 总结:</h3><p>Proactor将所有的I/O操作交给主线程和内核来处理,工作线程只是负责业务处理, Reactor是通知的是<strong>可读可写</strong>,而Proactor是通知<strong>读完成</strong>和<strong>写完成</strong></p>
 
     
   </div>
@@ -296,10 +268,10 @@ Hexo  配置与常用命令hexo常用命令
 
    
   <div class="box-prev-next clearfix">
-    <a class="hide pull-left" href="/">
+    <a class="show pull-left" href="/2017/02/19/Hexo-setting/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/02/21/Server-Code/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -397,8 +369,8 @@ Hexo  配置与常用命令hexo常用命令
     
   <section class="duoshuo-comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Hexo-setting" 
-      data-title="Hexo 常用命令" data-url="https://1314cc.github.io/2017/02/19/Hexo-setting/index.html"></div>
+    <div class="ds-thread" data-thread-key="post-Server-Code" 
+      data-title="服务器编程框架" data-url="https://1314cc.github.io/2017/02/21/Server-Code/index.html"></div>
     <!-- 多说评论框 end -->
   </section>
 
