@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>每天一个Linux命令(1) | Black&#39;s Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Linux命令," />
+  
+
+  <meta name="description" content="shell 下快捷键光标移动命令
+Ctrl + a移动到行首
+Ctrl + e移动到行尾
+Ctrl + f向前移动
+Ctrl + b向后移动
+Alt + f按单词前移
+Alt + b按单词后移
+删除命令
+Ctrl + u从光标处删除至命令行首
+Ctrl + k从光标处删除至行尾
+Ctrl + w从光标删除至字首
+Ctrl + d删除光标处的字符
+Ctrl + h删除光标前的字符
+重新显示命令
+Ct">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每天一个Linux命令(1)">
+<meta property="og:url" content="https://1314cc.github.io/2017/02/24/everyday-linux-1/index.html">
+<meta property="og:site_name" content="Black's Blog">
+<meta property="og:description" content="shell 下快捷键光标移动命令
+Ctrl + a移动到行首
+Ctrl + e移动到行尾
+Ctrl + f向前移动
+Ctrl + b向后移动
+Alt + f按单词前移
+Alt + b按单词后移
+删除命令
+Ctrl + u从光标处删除至命令行首
+Ctrl + k从光标处删除至行尾
+Ctrl + w从光标删除至字首
+Ctrl + d删除光标处的字符
+Ctrl + h删除光标前的字符
+重新显示命令
+Ct">
+<meta property="og:updated_time" content="2017-02-27T15:00:18.845Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="每天一个Linux命令(1)">
+<meta name="twitter:description" content="shell 下快捷键光标移动命令
+Ctrl + a移动到行首
+Ctrl + e移动到行尾
+Ctrl + f向前移动
+Ctrl + b向后移动
+Alt + f按单词前移
+Alt + b按单词后移
+删除命令
+Ctrl + u从光标处删除至命令行首
+Ctrl + k从光标处删除至行尾
+Ctrl + w从光标删除至字首
+Ctrl + d删除光标处的字符
+Ctrl + h删除光标前的字符
+重新显示命令
+Ct">
+
+  
+
+  
+    <link rel="icon" href="/images/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">More</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">More</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="ROUND_RECT"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell-下快捷键"><span class="toc-text">shell 下快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#光标移动命令"><span class="toc-text">光标移动命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除命令"><span class="toc-text">删除命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新显示命令"><span class="toc-text">重新显示命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制命令"><span class="toc-text">控制命令</span></a></li></ol></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-everyday-linux-1" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">每天一个Linux命令(1)</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.02.24</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Chen</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/category/Linux/">Linux</a>
+  </span>
+
+
+
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+
+      
+        <i class="icon-comment"></i> 
+        <span class="ds-thread-count" data-thread-key="post-everyday-linux-1"><i class="fa fa-spinner fa-spin"></i></span> 条评论
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="shell-下快捷键"><a href="#shell-下快捷键" class="headerlink" title="shell 下快捷键"></a>shell 下快捷键</h1><h2 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h2><ul>
+<li>Ctrl + a<br>移动到行首</li>
+<li>Ctrl + e<br>移动到行尾</li>
+<li>Ctrl + f<br>向前移动</li>
+<li>Ctrl + b<br>向后移动</li>
+<li>Alt + f<br>按单词前移</li>
+<li><p>Alt + b<br>按单词后移</p>
+<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2></li>
+<li>Ctrl + u<br>从光标处删除至命令行首</li>
+<li>Ctrl + k<br>从光标处删除至行尾</li>
+<li>Ctrl + w<br>从光标删除至字首</li>
+<li>Ctrl + d<br>删除光标处的字符</li>
+<li><p>Ctrl + h<br>删除光标前的字符</p>
+<h2 id="重新显示命令"><a href="#重新显示命令" class="headerlink" title="重新显示命令"></a>重新显示命令</h2></li>
+<li>Ctrl + r<br>逆向搜索命令历史</li>
+<li>Ctrl + g<br>退出搜索模式</li>
+<li>Ctrl + p<br>显示上一条命令</li>
+<li><p>Ctrl + n<br>显示下一条命令</p>
+<h2 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h2></li>
+<li>Ctrl + l(L)<br>清屏</li>
+<li>Ctrl + s<br>阻止屏幕输出</li>
+<li>Ctrl + q<br>允许屏幕输出</li>
+<li>Ctrl + c<br>终止命令</li>
+</ul>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫支持一下Black</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-weichat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/02/21/Server-Code/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/02/27/rm-rf事件/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="ROUND_RECT"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-everyday-linux-1" 
+      data-title="每天一个Linux命令(1)" data-url="https://1314cc.github.io/2017/02/24/everyday-linux-1/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"1314cc"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
