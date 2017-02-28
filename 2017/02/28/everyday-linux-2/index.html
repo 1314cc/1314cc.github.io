@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>每天一个Linux命令--shell快捷键 | Black&#39;s Blog</title>
+  <title>每天一个Linux命令--scp | Black&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,58 +15,34 @@
     <meta name="keywords" content="Linux命令," />
   
 
-  <meta name="description" content="shell 下快捷键光标移动命令
-Ctrl + a移动到行首
-Ctrl + e移动到行尾
-Ctrl + f向前移动
-Ctrl + b向后移动
-Alt + f按单词前移
-Alt + b按单词后移
-删除命令
-Ctrl + u从光标处删除至命令行首
-Ctrl + k从光标处删除至行尾
-Ctrl + w从光标删除至字首
-Ctrl + d删除光标处的字符
-Ctrl + h删除光标前的字符
-重新显示命令
-Ct">
+  <meta name="description" content="scp
+本地文件拷贝到远程服务器
+1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
+把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
+
+拷贝远程服务器文件到本地
+1scp  blackchen@192.168.0.110:/home/*  ~/t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每天一个Linux命令--shell快捷键">
-<meta property="og:url" content="https://1314cc.github.io/2017/02/24/everyday-linux-1/index.html">
+<meta property="og:title" content="每天一个Linux命令--scp">
+<meta property="og:url" content="https://1314cc.github.io/2017/02/28/everyday-linux-2/index.html">
 <meta property="og:site_name" content="Black's Blog">
-<meta property="og:description" content="shell 下快捷键光标移动命令
-Ctrl + a移动到行首
-Ctrl + e移动到行尾
-Ctrl + f向前移动
-Ctrl + b向后移动
-Alt + f按单词前移
-Alt + b按单词后移
-删除命令
-Ctrl + u从光标处删除至命令行首
-Ctrl + k从光标处删除至行尾
-Ctrl + w从光标删除至字首
-Ctrl + d删除光标处的字符
-Ctrl + h删除光标前的字符
-重新显示命令
-Ct">
-<meta property="og:updated_time" content="2017-02-28T15:38:19.496Z">
+<meta property="og:description" content="scp
+本地文件拷贝到远程服务器
+1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
+把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
+
+拷贝远程服务器文件到本地
+1scp  blackchen@192.168.0.110:/home/*  ~/t">
+<meta property="og:updated_time" content="2017-02-28T15:40:11.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="每天一个Linux命令--shell快捷键">
-<meta name="twitter:description" content="shell 下快捷键光标移动命令
-Ctrl + a移动到行首
-Ctrl + e移动到行尾
-Ctrl + f向前移动
-Ctrl + b向后移动
-Alt + f按单词前移
-Alt + b按单词后移
-删除命令
-Ctrl + u从光标处删除至命令行首
-Ctrl + k从光标处删除至行尾
-Ctrl + w从光标删除至字首
-Ctrl + d删除光标处的字符
-Ctrl + h删除光标前的字符
-重新显示命令
-Ct">
+<meta name="twitter:title" content="每天一个Linux命令--scp">
+<meta name="twitter:description" content="scp
+本地文件拷贝到远程服务器
+1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
+把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
+
+拷贝远程服务器文件到本地
+1scp  blackchen@192.168.0.110:/home/*  ~/t">
 
   
 
@@ -201,20 +177,20 @@ Ct">
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#shell-下快捷键"><span class="toc-text">shell 下快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#光标移动命令"><span class="toc-text">光标移动命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除命令"><span class="toc-text">删除命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#重新显示命令"><span class="toc-text">重新显示命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#控制命令"><span class="toc-text">控制命令</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#scp"><span class="toc-text">scp</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-everyday-linux-1" class="article article-type-post" itemprop="blogPost">
+   <article id="post-everyday-linux-2" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">每天一个Linux命令--shell快捷键</h1>
+    <h1 class="post-title">每天一个Linux命令--scp</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2017.02.24</span>
+        <span>2017.02.28</span>
       </span>
 
       
@@ -244,7 +220,7 @@ Ct">
 
       
         <i class="icon-comment"></i> 
-        <span class="ds-thread-count" data-thread-key="post-everyday-linux-1"><i class="fa fa-spinner fa-spin"></i></span> 条评论
+        <span class="ds-thread-count" data-thread-key="post-everyday-linux-2"><i class="fa fa-spinner fa-spin"></i></span> 条评论
       
       
     </div>
@@ -252,29 +228,15 @@ Ct">
 
   <div class="article-content">
     
-      <h1 id="shell-下快捷键"><a href="#shell-下快捷键" class="headerlink" title="shell 下快捷键"></a>shell 下快捷键</h1><h2 id="光标移动命令"><a href="#光标移动命令" class="headerlink" title="光标移动命令"></a>光标移动命令</h2><ul>
-<li>Ctrl + a<br>移动到行首</li>
-<li>Ctrl + e<br>移动到行尾</li>
-<li>Ctrl + f<br>向前移动</li>
-<li>Ctrl + b<br>向后移动</li>
-<li>Alt + f<br>按单词前移</li>
-<li><p>Alt + b<br>按单词后移</p>
-<h2 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h2></li>
-<li>Ctrl + u<br>从光标处删除至命令行首</li>
-<li>Ctrl + k<br>从光标处删除至行尾</li>
-<li>Ctrl + w<br>从光标删除至字首</li>
-<li>Ctrl + d<br>删除光标处的字符</li>
-<li><p>Ctrl + h<br>删除光标前的字符</p>
-<h2 id="重新显示命令"><a href="#重新显示命令" class="headerlink" title="重新显示命令"></a>重新显示命令</h2></li>
-<li>Ctrl + r<br>逆向搜索命令历史</li>
-<li>Ctrl + g<br>退出搜索模式</li>
-<li>Ctrl + p<br>显示上一条命令</li>
-<li><p>Ctrl + n<br>显示下一条命令</p>
-<h2 id="控制命令"><a href="#控制命令" class="headerlink" title="控制命令"></a>控制命令</h2></li>
-<li>Ctrl + l(L)<br>清屏</li>
-<li>Ctrl + s<br>阻止屏幕输出</li>
-<li>Ctrl + q<br>允许屏幕输出</li>
-<li>Ctrl + c<br>终止命令</li>
+      <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><ul>
+<li><p>本地文件拷贝到远程服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/</div></pre></td></tr></table></figure>
+<p>把本地<code>/home/cc</code>下的<code>a.tar.gz</code>拷贝到远程服务器<code>192.168.0.110</code> <code>blackchen</code>用户 <code>/home/tmp/</code>下</p>
+</li>
+<li><p>拷贝远程服务器文件到本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  blackchen@192.168.0.110:/home/*  ~/test/</div></pre></td></tr></table></figure>
+<p>把<code>192.168.0.110</code> 下<code>blackchen</code> 用户中的家目录下的所有文件拷贝到本地家目录中test目录下</p>
+</li>
 </ul>
 
     
@@ -306,10 +268,10 @@ Ct">
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/02/21/Server-Code/">
+    <a class="show pull-left" href="/2017/02/27/rm-rf事件/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/02/27/rm-rf事件/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -407,8 +369,8 @@ Ct">
     
   <section class="duoshuo-comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-everyday-linux-1" 
-      data-title="每天一个Linux命令--shell快捷键" data-url="https://1314cc.github.io/2017/02/24/everyday-linux-1/index.html"></div>
+    <div class="ds-thread" data-thread-key="post-everyday-linux-2" 
+      data-title="每天一个Linux命令--scp" data-url="https://1314cc.github.io/2017/02/28/everyday-linux-2/index.html"></div>
     <!-- 多说评论框 end -->
   </section>
 
