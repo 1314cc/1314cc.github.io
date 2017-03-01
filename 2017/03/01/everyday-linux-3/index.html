@@ -7,7 +7,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>每天一个Linux命令--scp | Black&#39;s Blog</title>
+  <title>每天一个Linux命令--du | Black&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,43 +15,22 @@
     <meta name="keywords" content="Linux命令," />
   
 
-  <meta name="description" content="scp
-文件拷贝
-本地文件拷贝到远程服务器1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
-
-
-
-
-把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
-
-拷贝远程服务器文件到本地1scp  blackchen@192.168.0.110:/home">
+  <meta name="description" content="du
+du显示当前目录的所有文件以及所有子目录的文件大小
+1234567891011121314151617181920212223242526cc@MyLinux:~/vundle$ du8	./test/files20	./test8	./.git/refs/heads4	./.git/refs/tags8	./.git/refs/remotes/origin12	./.git/refs/re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="每天一个Linux命令--scp">
-<meta property="og:url" content="https://1314cc.github.io/2017/02/28/everyday-linux-2/index.html">
+<meta property="og:title" content="每天一个Linux命令--du">
+<meta property="og:url" content="https://1314cc.github.io/2017/03/01/everyday-linux-3/index.html">
 <meta property="og:site_name" content="Black's Blog">
-<meta property="og:description" content="scp
-文件拷贝
-本地文件拷贝到远程服务器1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
-
-
-
-
-把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
-
-拷贝远程服务器文件到本地1scp  blackchen@192.168.0.110:/home">
-<meta property="og:updated_time" content="2017-03-01T15:15:35.248Z">
+<meta property="og:description" content="du
+du显示当前目录的所有文件以及所有子目录的文件大小
+1234567891011121314151617181920212223242526cc@MyLinux:~/vundle$ du8	./test/files20	./test8	./.git/refs/heads4	./.git/refs/tags8	./.git/refs/remotes/origin12	./.git/refs/re">
+<meta property="og:updated_time" content="2017-03-01T15:18:05.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="每天一个Linux命令--scp">
-<meta name="twitter:description" content="scp
-文件拷贝
-本地文件拷贝到远程服务器1scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/
-
-
-
-
-把本地/home/cc下的a.tar.gz拷贝到远程服务器192.168.0.110 blackchen用户 /home/tmp/下
-
-拷贝远程服务器文件到本地1scp  blackchen@192.168.0.110:/home">
+<meta name="twitter:title" content="每天一个Linux命令--du">
+<meta name="twitter:description" content="du
+du显示当前目录的所有文件以及所有子目录的文件大小
+1234567891011121314151617181920212223242526cc@MyLinux:~/vundle$ du8	./test/files20	./test8	./.git/refs/heads4	./.git/refs/tags8	./.git/refs/remotes/origin12	./.git/refs/re">
 
   
 
@@ -186,20 +165,20 @@
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#scp"><span class="toc-text">scp</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#du"><span class="toc-text">du</span></a></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-everyday-linux-2" class="article article-type-post" itemprop="blogPost">
+   <article id="post-everyday-linux-3" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">每天一个Linux命令--scp</h1>
+    <h1 class="post-title">每天一个Linux命令--du</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2017.02.28</span>
+        <span>2017.03.01</span>
       </span>
 
       
@@ -229,7 +208,7 @@
 
       
         <i class="icon-comment"></i> 
-        <span class="ds-thread-count" data-thread-key="post-everyday-linux-2"><i class="fa fa-spinner fa-spin"></i></span> 条评论
+        <span class="ds-thread-count" data-thread-key="post-everyday-linux-3"><i class="fa fa-spinner fa-spin"></i></span> 条评论
       
       
     </div>
@@ -237,32 +216,20 @@
 
   <div class="article-content">
     
-      <h1 id="scp"><a href="#scp" class="headerlink" title="scp"></a>scp</h1><ul>
-<li>文件拷贝<ul>
-<li>本地文件拷贝到远程服务器<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  /home/cc/a.tar.gz  blackchen@192.168.0.110:/home/tmp/</div></pre></td></tr></table></figure>
+      <h1 id="du"><a href="#du" class="headerlink" title="du"></a>du</h1><ul>
+<li><p><code>du</code><br>显示当前目录的所有文件以及所有子目录的文件大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">cc@MyLinux:~/vundle$ du</div><div class="line">8	./test/files</div><div class="line">20	./test</div><div class="line">8	./.git/refs/heads</div><div class="line">4	./.git/refs/tags</div><div class="line">8	./.git/refs/remotes/origin</div><div class="line">12	./.git/refs/remotes</div><div class="line">28	./.git/refs</div><div class="line">8	./.git/info</div><div class="line">4	./.git/branches</div><div class="line">44	./.git/hooks</div><div class="line">8	./.git/logs/refs/heads</div><div class="line">8	./.git/logs/refs/remotes/origin</div><div class="line">12	./.git/logs/refs/remotes</div><div class="line">24	./.git/logs/refs</div><div class="line">32	./.git/logs</div><div class="line">4	./.git/objects/info</div><div class="line">1020	./.git/objects/pack</div><div class="line">1028	./.git/objects</div><div class="line">1168	./.git</div><div class="line">8	./syntax</div><div class="line">48	./autoload/vundle</div><div class="line">56	./autoload</div><div class="line">8	./ftplugin</div><div class="line">20	./doc</div><div class="line">1328	.</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>du -h</code><br>以人类的角度直观的显示当前目录或指定目录/文件的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">cc@MyLinux:~/vundle$ du -h</div><div class="line">8.0K	./test/files</div><div class="line">20K	./test</div><div class="line">8.0K	./.git/refs/heads</div><div class="line">4.0K	./.git/refs/tags</div><div class="line">8.0K	./.git/refs/remotes/origin</div><div class="line">12K	./.git/refs/remotes</div><div class="line">28K	./.git/refs</div><div class="line">8.0K	./.git/info</div><div class="line">4.0K	./.git/branches</div><div class="line">44K	./.git/hooks</div><div class="line">8.0K	./.git/logs/refs/heads</div><div class="line">8.0K	./.git/logs/refs/remotes/origin</div><div class="line">12K	./.git/logs/refs/remotes</div><div class="line">24K	./.git/logs/refs</div><div class="line">32K	./.git/logs</div><div class="line">4.0K	./.git/objects/info</div><div class="line">1020K	./.git/objects/pack</div><div class="line">1.1M	./.git/objects</div><div class="line">1.2M	./.git</div><div class="line">8.0K	./syntax</div><div class="line">48K	./autoload/vundle</div><div class="line">56K	./autoload</div><div class="line">8.0K	./ftplugin</div><div class="line">20K	./doc</div><div class="line">1.3M	.</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>du -s</code><br>显示总共大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cc@MyLinux:~/vundle$ du -s</div><div class="line">1328	.</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>du -sh</code><br>以人类的角度直观的显示总共的大小</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cc@MyLinux:~/vundle$ du -sh</div><div class="line">1.3M	.</div></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ul>
-<p>把本地<code>/home/cc</code>下的<code>a.tar.gz</code>拷贝到远程服务器<code>192.168.0.110</code> <code>blackchen</code>用户 <code>/home/tmp/</code>下</p>
-<ul>
-<li>拷贝远程服务器文件到本地<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  blackchen@192.168.0.110:/home/*  ~/test/</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>把<code>192.168.0.110</code> 下<code>blackchen</code> 用户中的家目录下的所有文件拷贝到本地家目录中test目录下</p>
-<ul>
-<li>目录拷贝<ul>
-<li>本地目录拷贝到远程服务器<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  /home/cc/test_dir  blackchen@192.168.0.110:/home/tmp/</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>把本地<code>/home/cc</code>下的<code>test_dir</code>目录拷贝到远程服务器<code>192.168.0.110</code> <code>blackchen</code>用户 <code>/home/tmp/</code>下</p>
-<ul>
-<li>拷贝远程服务器目录到本地<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">scp  blackchen@192.168.0.110:/home/test_dir ~/test/</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>把<code>192.168.0.110</code> 下<code>blackchen</code> 用户中的家目录下的<code>test_dir</code>目录拷贝到本地家目录中test目录下</p>
 
     
   </div>
@@ -293,10 +260,10 @@
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/02/27/rm-rf事件/">
+    <a class="show pull-left" href="/2017/02/28/everyday-linux-2/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2017/03/01/everyday-linux-3/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
@@ -394,8 +361,8 @@
     
   <section class="duoshuo-comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-everyday-linux-2" 
-      data-title="每天一个Linux命令--scp" data-url="https://1314cc.github.io/2017/02/28/everyday-linux-2/index.html"></div>
+    <div class="ds-thread" data-thread-key="post-everyday-linux-3" 
+      data-title="每天一个Linux命令--du" data-url="https://1314cc.github.io/2017/03/01/everyday-linux-3/index.html"></div>
     <!-- 多说评论框 end -->
   </section>
 
